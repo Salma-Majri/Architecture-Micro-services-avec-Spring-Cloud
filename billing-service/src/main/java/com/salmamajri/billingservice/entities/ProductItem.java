@@ -1,9 +1,7 @@
 package com.salmamajri.billingservice.entities;
 
 import com.salmamajri.billingservice.model.Product;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Transient;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -13,6 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class ProductItem {
+    @Id @GeneratedValue
     private Long id;
     private long productId;
     private int quantity;
