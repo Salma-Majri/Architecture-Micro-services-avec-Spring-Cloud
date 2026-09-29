@@ -1,7 +1,9 @@
 package com.salmamajri.billingservice.entities;
 
+import com.salmamajri.billingservice.model.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Transient;
 import lombok.*;
 
 @Entity
@@ -17,4 +19,6 @@ public class ProductItem {
     private double price;
     @ManyToOne
     private Bill bill;
+    @Transient
+    private Product product;
 }
